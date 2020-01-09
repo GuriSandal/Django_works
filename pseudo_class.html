@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo Class</title>
+    <style>
+        a:link{
+            color:green;
+        }
+        a:hover{
+            color:black;
+            text-decoration: none;
+            background-color: orange;
+            border-radius: 5px;
+            transition: 1s;
+            padding: 5px;
+            box-shadow: 0px 0px 10px black;
+            font-size: 25px;
+        }
+        a:active{
+            color: black;
+        }
+        
+        a:visited{
+            color:brown;
+        }
+
+        p::first-letter{
+            font-size: 30px;
+            color: red;
+            font-family: cursive;
+        }
+        
+        .ab::first-line{
+            color: green;
+            font-style: italic;
+        }
+        p::selection{
+            background-color: magenta ;
+            color: white;
+        }
+        p::before{
+            content: '@';
+        }
+        p::after{
+            content:'$';
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.faceboo.com">Facebook</a>
+    <a href="table.html">Table</a>
+    <a href="list.html">List</a>
+    <a href="css_border.html">Border</a>
+    <p class="ab">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cupiditate a quo eius tenetur harum reiciendis, similique at. Voluptas enim alias soluta at ad ipsa quidem autem necessitatibus fuga veritatis!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id praesentium quas libero, eum magni labore harum nostrum veritatis error iusto nobis doloremque? Illum, magni repudiandae non animi voluptates quae possimus!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eveniet consectetur dicta illo ipsam ad, amet iste porro animi temporibus odio quibusdam assumenda et eos fugiat, ut rerum possimus deleniti?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique tempora eaque amet reiciendis provident. Dolores, cumque assumenda. Fuga soluta quidem, ea, enim itaque culpa, ipsa a explicabo rem quasi adipisci.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis assumenda optio libero aut nam laudantium repellendus, at dolores sapiente et quisquam sunt illo a vel, ratione sint rem cum vero.
+    </p>
+    <p class="ab">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, recusandae corrupti adipisci magnam temporibus soluta similique voluptatum laudantium, sint quis perspiciatis facilis aliquam perferendis consectetur ratione cumque ipsam velit exercitationem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aut qui rerum exercitationem soluta iste consequatur, repellat nemo laboriosam assumenda fuga facilis incidunt sapiente. Aut quam impedit odit quis iste!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum consequuntur ullam nulla repellat commodi earum deleniti neque autem veritatis praesentium laboriosam, voluptas molestias vero doloribus? Omnis inventore quasi animi laboriosam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, illo? Asperiores cumque aperiam maxime ipsam! Laudantium necessitatibus omnis ratione delectus dolore eligendi consequatur. Ratione dolores quo delectus atque assumenda necessitatibus.
+    </p>
+    <pre>
+        faskjakfs                ldknflkadn
+    </pre>
+</body>
+</html>
