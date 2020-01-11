@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover Transition</title>
+    <style>
+        .main{
+            height: 300px;
+            width: 300px;
+            border: 1px solid red;
+            margin:auto;
+            background-image: url("https://static.toiimg.com/photo/72975551.cms");
+            background-size: 100% 100%;
+            box-shadow: 0px 0px 20px, black;
+            margin-top: 150px;
+        }
+        .child{
+            color: white;
+            background-color: red;
+            height: 0%;
+            background-color: rgba(255,0,0,0.7);
+            text-align: center;
+            overflow: hidden;
+        }
+        h1{
+            margin:0px;
+        }
+        .main:hover .child{
+            height: 100%;
+            transition: 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child">
+            <h1>Transition</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium explicabo, sunt blanditiis tempora magni dolor! Quos nobis nemo voluptatem eligendi laborum, magni ex, totam rem tempora ratione, adipisci architecto?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo ut ad, animi sed non voluptates nesciunt possimus. Culpa aliquam porro earum quibusdam. Omnis accusamus, nemo asperiores vitae delectus fugit?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
