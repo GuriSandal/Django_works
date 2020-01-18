@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <style>
+        input[type="text"],input[type="password"],input[type="email"],input[type="color"],input[type="number"],input[type="week"],
+        input[type="month"],input[type="datetime-local"],input[type="date"],select,textarea,canvas{
+            height: 20px;
+            width: 80%;
+            margin: 5px;
+        }
+        form{
+            text-align: center;
+        }
+        input:not([type=email]){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" placeholder="Enter your name" required readonly>
+        <input type="password" placeholder="Enter password" disabled>
+        <input type="email">
+        <input type="date">
+        <input type="number">
+        <input type="datetime-local"><br>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <input type="checkbox">Select1
+        <input type="checkbox">Select2
+        <input type="file">
+        <input type="color">
+        <input type="range" min="0" max="100">
+        <input type="month">
+        <input type="week">
+        <canvas width="200" height="100" style="border:1px solid #000000;"></canvas>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <select name="" id="">
+            <option value="0">Chandigarh</option>
+            <option value="1">Mohali</option>
+        </select>
+        <select name="" id="">
+            <script>
+                for(i=1; i<100; i++){
+                    document.write("<option>"+i+"</option>")
+                }
+            </script>
+        </select>
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>

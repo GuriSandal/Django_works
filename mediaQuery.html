@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Media Query</title>
+    <style>
+        .box{
+            width: 33.33%;
+            height: 200px;
+            background: red;
+            float: left;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        .ab{
+            background: grey;
+        }
+        h1{
+            color: honeydew;
+        }
+        .m{
+            display: none;
+        }
+        @media screen and (max-width:600px){
+            .box{
+                width: 100%;
+                background: green;
+            }
+            .ab{
+                background: pink !important;
+            }
+            .d{
+              display: none;  
+            }
+            .m{
+                display: inline-block;
+            }
+        }
+        @media screen and (max-width:700px){
+            .ab{
+                background: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="d">Disktop View</h1>
+        <h1 class="m">Mobile View</h1>
+    </div>
+    <div class="box ab"></div>
+    <div class="box"></div>
+</body>
+</html>

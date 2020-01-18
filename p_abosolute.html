@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Absolute_Positions</title>
+    <style>
+        .box1,.box2,.box3{
+            height: 200px;
+            width: 200px;
+            border: 2px solid green;
+            /* transform: rotate(50deg); */
+            
+        }
+        .box1{
+            background-color: orange;
+        }
+        .box2{
+            background-color: blue;
+            position: relative;
+            top: 100px;
+            right: 0px;
+        }
+        .box3{
+            background-color: purple;
+            height: 100px;
+            width: 100px;
+            border: 2px solid sandybrown;
+            position: absolute;
+            top:-50px;
+            left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+    
+</body>
+</html>

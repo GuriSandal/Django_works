@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body,ul,a,h1{
+            margin: 0px;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+        }
+        .nav{
+            background: black;
+            width: 100%;
+            padding: 10px;
+            position: fixed;
+            z-index: 9999;
+        }
+        ul{
+            word-spacing: 50px;
+            color: wheat;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 600px;
+        }
+        li{
+            display: inline-block;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+        li a:link{
+            color:white;
+            text-decoration: none;
+        }
+        li a:hover{
+            color:lightgray !important; 
+            transition: 1s !important;
+        }
+        li a:active{
+            color: white;
+        }
+        
+        li a:visited{
+            color:white;
+        }
+        .nav h1{
+            color: darkred;
+            display: inline;
+            margin-left: 100px;
+            font-family: 'Pacifico', cursive;
+            font-size: 30px;
+        }
+
+        .cover{
+            width: 100%;
+            height: 550px;
+            background: url("https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+            position: relative;
+            top:70px;
+        }
+        .cover_text{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            top: 250px;
+            left: 100px;
+            position: absolute;
+        }
+        button{
+            padding: 12px;
+            width: 170px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgba(0, 0,0, 0);
+            
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .cover_text button{
+            color: white;
+        }
+        .middle{
+            margin-top: 120px;
+            width: 100%;
+            height: 400px;
+            
+        }
+        .middle_text{
+            padding: 80px;
+        }
+        .middle_text h1{
+            color: #e5474b;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .middle_text button{
+            border: 2px solid #e5474b;
+            color: #e5474b;
+        }
+        .middle_text p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 17px;
+            text-align: justify;
+        }
+        .middle_lower{
+            width: 100%;
+        }
+        .middle_lower_left{
+            width: 50%;
+            background: rgb(190, 186, 186);
+            height: 500px;
+            float: left;
+        }
+        .middle_lower_right{
+            width: 50%;
+            height: 500px;
+            background: rgb(224, 220, 220);
+            float: left;
+        }
+        .middle_lower_left .text{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 100px;
+            padding-top: 80px;
+            padding-right: 150px;
+        }
+        .middle_lower_left .text h2{
+            color:#e5474b;
+        }
+        .middle_lower_right .text{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 100px;
+            padding-top: 80px;
+            padding-right: 150px;
+        }
+        .middle_lower_right .text h2{
+            color:#e5474b;
+        }
+
+        .lower{
+            width: 100%;
+        }
+        .lower_left{
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav">   
+        <h1>intospect</h1>
+        <ul type="none">
+            <li><a href="">HOME</a></li>
+            <li><a href="">GENRIC</a></li>
+            <li><a href="">ELEMENT</a></li>
+        </ul>
+    </div>
+    <div class="cover">
+        <div class="cover_text">
+        <h1>INTROSPECT: A FREE + FULLY RESPONSIVE <br> SITE TEMPLATE BY TEMPLATED</h1>
+        <button>GET STARTED</button>
+    </div>
+    </div>
+    <div class="middle">
+        <div class="middle_text"> 
+            <h1>MAGNA ETIAM LOREM</h1>
+            <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu, erisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante.</p>
+            <button>LEARN MORE</button>
+        </div>
+    </div>
+
+    <div class="middle_lower">
+        <div class="middle_lower_left">
+            <div class="text">
+                <h2>PELLENTESQUE ADIPIS</h2>
+                <img src="https://templated.co/items/demos/introspect/images/pic01.jpg" alt="" width="100%">
+                <p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+            </div>
+        </div>
+        <div class="middle_lower_right">
+            <div class="text">
+                <h2>MORBI INTERDUM MOL</h2>
+                <img src="https://templated.co/items/demos/introspect/images/pic02.jpg" alt="" width="100%">
+                <p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lower">
+        <div class="lower_left">
+            <div class="text">
+                
+            </div>
+        </div>
+
+        <div class="lower_center">
+            <div class="text">
+            </div>
+        </div>
+
+        <div class="lower_right">
+            <div class="text">
+          </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
