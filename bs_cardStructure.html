@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card Structure</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/fontawesome/css/all.min.css">
+    <script src="static/jquery.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-columns">
+                <script>
+                    ab = ""
+                    for(i=1; i<100; i++){
+                        ab += '<div class="card shadow">';
+                        ab += '<div class="card-body">';
+                        ab += '<img src="media/images/pic02.jpg" alt="" class="card-img">';
+                        ab += '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, aliquid? Blanditiis, dignissimos voluptatibus magnam eius animi assumenda facere at quos eaque ducimus excepturi obcaecati. Saepe et nesciunt facilis odit sunt.</p>';
+                        ab += '<a href="" class="card-link">Click Here</a>';
+                        ab += '</div>';
+                        ab += '</div>';
+                    }
+                    document.write(ab);
+                </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

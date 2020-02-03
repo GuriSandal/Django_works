@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <title>JS task</title>
+    <style>
+        .circle{
+            height: 100px;
+            width: 100px;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            margin: 32px;
+            font-size: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        a = prompt("Enter a Color Code:")
+        if(a == ""){
+            document.write("<div class='alert alert-warning'>Please Enter a Color</div>")
+        }
+        else if(a == null){
+            document.write("<div class='alert alert-danger'>You Cancel The Request</div>")
+
+        }
+        else{
+        for(i=1;i<=a.length; i++){
+            
+                document.write('<div class="circle" style="background:'+a+'">'+i+'</div>')
+            
+        }
+    }
+    </script>
+</body>
+</html>

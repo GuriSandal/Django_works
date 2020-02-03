@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Funtions</title>
+</head>
+<body id="main">
+    <h1 id="h">hello</h1>
+    <script>
+        function abcd(){
+            v = document.getElementById("ab").value;
+            document.getElementById("rs").value = eval(v);
+        }
+    </script>
+    <input type="text" id="ab">
+    <input type="text" id="rs" disabled>
+    <button onclick="abcd()" >call funtion</button>
+</body>
+</html>

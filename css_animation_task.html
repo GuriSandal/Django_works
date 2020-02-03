@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Animations 2</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            animation:myani;
+            border: 20px solid gray;
+            border-top: 20px solid blue;
+            border-radius: 50%;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes myani {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+        .progress{
+            height: 50px;
+            background: gray;
+            border-radius: 5px;
+        }
+        .bar{
+            width: 0%;
+            height: 50px;
+            border-radius: 5px;
+            animation: ab 2s infinite linear;
+        }
+        @keyframes ab{
+            from{width: 0%; background: blue;}
+            to{width: 100%; background: blue;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+</body>
+</html>
