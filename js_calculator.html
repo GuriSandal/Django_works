@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Calculator</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 p-5 ">
+                <input type="text" name="" id="entry" class="form-control m-1" disabled>
+                <div class="row">
+                    <div class="col-md-8 ">
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('1')">1</button>     
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('2')">2</button>     
+                        <button class="btn btn-primary btn-lg m-1 ml-2" onclick="calc('3')">3</button>
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('4')">4</button>     
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('5')">5</button>     
+                        <button class="btn btn-primary btn-lg m-1 ml-2" onclick="calc('6')">6</button> 
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('7')">7</button>     
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('8')">8</button>     
+                        <button class="btn btn-primary btn-lg m-1 ml-2" onclick="calc('9')">9</button>
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('.')">.</button>
+                        <button class="btn btn-primary btn-lg m-1 mr-2" onclick="calc('0')">0</button>
+                        <button class="btn btn-primary btn-lg m-1 ml-2" onclick="calc('=')">=</button>
+                            
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary btn-lg btn-block m-1 " onclick="calc('+')">+</button>     
+                        <button class="btn btn-primary btn-lg btn-block m-1 mt-2" onclick="calc('*')">*</button>         
+                        <button class="btn btn-primary btn-lg btn-block m-1 mt-2" onclick="calc('/')">/</button>     
+                        <button class="btn btn-primary btn-lg btn-block m-1 mt-2" onclick="calc('%')">%</button> 
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block m-1" onclick="calc('C')">C</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <script>
+        function calc(a){
+            if(a=='='){
+                document.getElementById("entry").value = eval(document.getElementById("entry").value);    
+            }
+            else if(a=="C"){
+                document.getElementById("entry").value = ""
+            }
+            else{
+                document.getElementById("entry").value += a;
+            }
+        }
+    </script>
+</body>
+</html>

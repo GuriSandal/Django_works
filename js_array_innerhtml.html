@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Array innerHtml</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Color</th>
+                <th>Visual</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    <script>
+        let colors = ["red", "blue", "green"];
+        r = "";
+        for(i=0;i<colors.length;i++){
+            r += "<tr>";
+                r += "<td>"+i+"</td>";    
+                r += "<td>"+colors[i]+"</td>";
+                r += "<td style='background:"+colors[i]+";'></td>";    
+            r += "</tr>";
+        }
+        alert(r);
+        document.getElementById("tbody").innerHTML = r;
+    </script>
+    <script>
+        let arr = [];
+        for(i=1;i<=100;i++){
+            if(i%2 == 0){
+                arr.push(i);
+            }
+        }
+        document.write(arr);
+    </script>
+</body>
+</html>

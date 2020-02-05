@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Manual Sort</title>
+</head>
+<body>
+    <script>
+        arr = [2,6,2,1,5,8,12,45];
+        document.write("<br/>BEFORE: "+arr)
+        for(let i=0; i<arr.length; i++){
+            for(j = 0; j<arr.length; j++){
+                if(arr[i]<arr[j]){
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        document.write("<br/>AFTER: "+arr)
+    </script>
+</body>
+</html>
