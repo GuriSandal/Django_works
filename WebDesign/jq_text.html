@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jq text</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <script src="static/jquery.js"></script>
+</head>
+<body>
+    <button id="html">Click add Html</button>
+    <button id="text">Click add Html</button>
+    <div class="jumbotron">
+        <h1>lore</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, consequatur atque iusto numquam neque excepturi harum distinctio expedita sapiente aut exercitationem, velit cupiditate, pariatur aliquid quidem inventore rerum in. Voluptatem!</p>
+        <div id="rs"></div>
+    </div>
+    <script>
+        $(function(){
+            $("#html").click(function(){
+                $("#rs").html("<h1>Hello</h1>")
+            })
+        })
+        $(function(){
+            $("#text").click(function(){
+                $("#rs").text("<h1>Hello</h1>")
+            })
+        })
+    </script>
+</body>
+</html>

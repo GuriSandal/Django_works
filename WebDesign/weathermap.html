@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather map</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <script src="static/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <input type="text" class="form-control my-2" id="city" placeholder="Enter City Name">
+                <input type="submit" class="btn btn-warning my-2 btn-block" id="abcd">
+                <div class="card shadow shadow-lg text-center">
+                    <div class="card-header">
+                        <h4 id="cname"></h4>
+                    </div>
+                    <div class="card-body font-weight-bold">
+                        <span id="icon"></span>
+                        <p id="temp"></p>
+                        <p id="detail"></p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
+    </div>
+    <script>
+        $("#abcd").click(function(){
+            let ct = $("#city").val();
+        $.ajax({
+            url:"https://api.openweathermap.org/data/2.5/weather?q="+ct+"&units=metric&appid=21e696f4e0e757c95340595f106183b3",
+            type:"get",
+            success:function(data){
+                $("#cname").html(data["name"])
+                $("#icon").html("<img src='http://openweathermap.org/img/wn/"+data["weather"][0]["icon"]+"@2x.png' alt=''>")
+                $("#temp").html(data["main"]["temp"]+"&deg C")
+                $("#detail").html(data["weather"][0]["description"])
+            }
+        })
+    })
+    </script>
+</body>
+</html>

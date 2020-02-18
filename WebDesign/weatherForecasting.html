@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wether Forcasting</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <script src="static/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="city" placeholder="City Name Here..">
+            </div>
+            <div class="col-md-6">
+                <input type="button" class="btn btn-success btn-block" id="btn" value="Get Weather">
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12">
+                <h1 id="cname" class="text-center"></h1>
+                <div class="">
+
+                </div>
+            </div>
+        </div>
+        <div class="row" id="result">
+
+        </div>
+    </div>
+    <script>
+    $("#btn").click(function(){
+        let ct=$("#city").val();
+        $.ajax({
+            url:"https://api.openweathermap.org/data/2.5/forecast?q="+ct+"&appid=e79a7d07c4e3bf54dd170836c3e88496&units=metric",
+            type:"get",
+            success:function(data){
+                $("#cname").html(data.city.name+"("+data.city.country+")");
+                let ab=""
+                for(i in data.list){
+                    if(data.list[i].dt_txt.split(" ")[1] == "09:00:00"){
+                        ab+="<div class='col-md-4 pb-2'>";
+                        ab+="<div class='card shadow shadow-lg'>";
+                        ab+="<div class='card-header'>";
+                        ab+="<h4>"+data.list[i].dt_txt+"</h4>";
+                        ab+="</div>";
+                        ab+="<div class='card-body text-center'>";
+                        ab+="<img src='http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+"@2x.png'>";
+                        ab+="<p>"+data["list"][i]["main"]["temp"]+"&deg;C</p>";
+                        ab+="<strong class='text-danger'>"+data["list"][i]["weather"][0]["main"]+"</strong><br/>";
+                        ab+="<em>("+data.list[i].weather[0].description+")</em>";
+                        ab+="</div>"
+                        ab+="</div>";
+                        ab+="</div>";
+                    }
+                }
+                $("#result").html(ab);
+            }
+        })
+    });
+    </script>
+</body>
+</html>

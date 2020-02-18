@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countary Info</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-primary table-striped table-hover mt-5">
+                    <thead class="thead-dark" >
+                        <tr>
+                            <th>Name</th>
+                            <th>Capital</th>
+                            <th>Borders</th>
+                            <th>Flag</th>
+                        </tr>
+                    </thead>
+                    <tbody id="t_body" class="">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        var countries = [
+                {
+                name:'India',
+                capital:'New Delhi',
+                borders:["AFG","BGD","BTN","MMR","CHN","NPL","PAK","LKA"],
+                flag:'https://restcountries.eu/data/ind.svg',
+            },
+                {
+                name:'Afghanistan',
+                capital:'Kabul',
+                borders:["IRN","PAK","TKM","UZB","TJK","CHN"],
+                flag:'https://restcountries.eu/data/afg.svg',
+            },
+                {
+                name:'Pakistan',
+                capital:'Islamabad',
+                borders:["AFG","CHN","IND","IRN"],
+                flag:'https://restcountries.eu/data/pak.svg',
+            },
+                {
+                name:'China',
+                capital:'Beijing',
+                borders:["AFG","BTN","MMR","HKG","IND","KAZ","PRK","KGZ","LAO","MAC","MNG","PAK","RUS","TJK","VNM"],
+                flag:'https://restcountries.eu/data/chn.svg',
+            },
+        ]
+
+        temp = "";
+        for(country in countries){
+            temp += "<tr>"
+                temp +="<td>"+countries[country].name+"</td>";
+                temp +="<td>"+countries[country].capital+"</td>";
+                border = ""
+                for(i in countries[country].borders){
+                    border += "<option>"+countries[country].borders[i]+"</options>"
+                }
+                temp +="<td><select class='form-control'>"+border+"</select></td>";
+                temp +="<td><div style='background:url("+countries[country].flag+"); height:100px; width:100%; background-size:100%; background-repeat:no-repeat;'></div></td>";
+            temp += "</tr>"
+        }
+        document.getElementById("t_body").innerHTML = temp;
+    </script>
+</body>
+</html>

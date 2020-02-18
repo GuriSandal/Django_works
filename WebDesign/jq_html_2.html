@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jq Html 2</title>
+    <script src="static/jquery.js"></script>
+</head>
+<body>
+    <input type="text" id="num" placeholder="Enter Something">
+    <button id="btn">Get Data</button>
+    <h1 id="result"></h1>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                let v = $("#num").val();
+                let a = "";
+                for(let i=1; i<=v; i++){
+                    a += i+"<br/>";
+                }
+                $("#result").html(a);
+            })
+        })
+    </script>
+</body>
+</html>

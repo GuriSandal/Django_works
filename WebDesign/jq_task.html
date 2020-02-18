@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQ CSS</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/fontawesome/css/all.min.css">
+    <script src="static/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mx-auto p-5 mt-5 shadow shadow-lg">
+                <small id="rs"></small>
+                <form action="">
+                    <div class="form-group">
+                        <label>Enter Password</label>
+                        <div class="input-group">
+                            <input type="password" id="pwd" class="form-control" onkeyup="check()">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="eye"><i class="fas fa-eye"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Enter Password Again</label>
+                        <input type="password" id="cpwd" class="form-control" onkeyup="check()">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Enter" class="btn btn-success btn-block" id="bt">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check(){
+            let pw = $("#pwd").val();
+            let cpw = $("#cpwd").val();
+            if(pw == cpw){
+                $("#rs").html("mached!!").css({color:"green",});
+                $("#cpwd").css({border:"1px solid green", "box-shadow":"none"});
+                $("#pwd").css({border:"1px solid green", "box-shadow":"none"});
+                $("#bt").removeAttr("disabled");
+
+            }
+            else{
+                $("#rs").html("!! Not mached!!");
+                $("#cpwd").css({border:"1px solid red", "box-shadow":"none"});
+                $("#pwd").css({border:"1px solid red", "box-shadow":"none"});
+                $("#bt").attr("disabled",true);
+                
+            }
+        }
+        $("#eye").click(function() {
+            a = $("#pwd").attr("type");
+                if(a == "password"){
+                    $(".fas").removeClass("fa-eye");
+                    $(".fas").addClass("fa-eye-slash");
+                    $("#pwd").attr({"type":"text"});
+                }  
+                else{
+                    
+                    $(".fas").addClass("fa-eye");
+                    $(".fas").removeClass("fa-eye-slash");
+                    $("#pwd").attr({"type":"password"});
+                } 
+        })         
+        
+            
+        
+    </script>
+</body>
+</html>

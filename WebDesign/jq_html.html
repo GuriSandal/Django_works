@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jq Html</title>
+</head>
+<body>
+    <input type="text" id="num" placeholder="Enter Something">
+    <button id="btn" onclick="abcd()">Get Data</button>
+    <h1 id="result"></h1>
+    <script>
+        function abcd(){
+            let v = document.getElementById("num").value
+            rs = ""
+            for(i=1;i<v;i++){
+                for(j=0;j<i;j++){
+                    rs += "*"
+                }
+                rs += "<br/>"
+            }
+            document.getElementById("result").innerHTML = rs
+        }
+    </script>
+</body>
+</html>

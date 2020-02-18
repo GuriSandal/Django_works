@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Objects</title>
+</head>
+<body>
+    <script>
+        let student = {
+            name:"Mr. Gurjant Singh",
+            age:21,
+            fee:1000,
+            hobbies:["programming","Wathcing Cricket"],
+            intro:function(){
+                return this.name+" is "+ this.age+" years old";
+            },
+            technology:{front:["Html","CSS"],
+                        backend:["Django","SQLite"]},
+        }
+        
+        document.write(student["age"]+"<br/>");
+        document.write(student.hobbies[0]+"<br/>");
+        document.write(student.intro()+"<br/>");
+        document.write(student["technology"]["backend"][0]+"<br/>");
+
+        student.email = "sandalgurjant@gmial.com";
+
+        // delete student.hobbies;
+
+        // document.write(JSON.stringify(student)+"<br/>");
+        
+        for(i in student){
+            document.write(i+"<br/>");
+            document.write(student[i]+"<br/><br/>");
+        }
+        
+
+    </script>
+</body>
+</html>

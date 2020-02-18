@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Object Looping</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body" id="data">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let emp =  {
+            image:"https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work.png",
+            name:"Jack",
+            salary:15000,
+            profile:"Software Engineer",
+            empcode:"A1001",
+        }
+        
+        let rs ="";
+        for(j in emp){
+            if(j == "image"){
+                rs += "<img src="+emp[j]+" height='300' width='100%'></img>"; 
+            }
+            else{
+                rs += "<div>"+j+": "+emp[j]+"</div>"; 
+            }
+        }
+        document.getElementById("data").innerHTML = rs;
+
+    // let employee = new Object();
+    // employee.name="harry";
+    // employee.salary=10000;
+    // document.write(JSON.stringify(employee));
+    </script>
+</body>
+</html>

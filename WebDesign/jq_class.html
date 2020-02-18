@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQ Class</title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <script src="static/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <button id="b1">Add Class</button>
+                <button id="b2">Remove Class</button>
+                <button id="b3">Toggle Class</button>
+            </div>
+            <div class="col-md-12 ab">
+                <h1>Loaer Ipsum</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias odit impedit distinctio velit dolorum vel molestiae dolor fugiat ratione autem, quae incidunt nesciunt fugit provident, exercitationem rem vero quos voluptates?</p>
+                <div style="height: 100px; width: 100px; background: black;" class="box"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $(".ab").addClass("bg-success text-white txt");
+                $(".box").addClass("bg-danger rounded-circle");
+            })
+            $("#b2").click(function(){
+                $(".ab").removeClass("bg-success text-white txt");
+                $(".box").removeClass("bg-danger rounded-circle");
+            })
+            $("#b2").click(function(){
+                $(".ab").toggleClass("bg-success text-white txt");
+                $(".box").toggleClass("bg-danger rounded-circle");
+            })
+        })
+    </script>
+</body>
+</html>
