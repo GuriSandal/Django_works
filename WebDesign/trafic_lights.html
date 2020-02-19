@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafic Light</title>
+    <script src="static/jquery.js"></script>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 p-4 text-center">
+                <button id="start" class="btn btn-lg text-white bg-success mx-2">Start</button>
+                <button id="stop" class="btn btn-lg text-white bg-danger mx-2">Stop</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center" id="">0</div>
+                    <div class="card-body">
+                        <div id="1_red" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-danger"></div>
+                        <div id="1_yellow" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-warning"></div>
+                        <div id="1_green" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-success"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center" id="">0</div>
+                    <div class="card-body">
+                        <div id="2_red" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-danger"></div>
+                        <div id="2_yellow" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-warning"></div>
+                        <div id="2_green" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-success"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center" id="">0</div>
+                    <div class="card-body">
+                        <div id="3_red" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-danger"></div>
+                        <div id="3_yellow" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-warning"></div>
+                        <div id="3_green" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-success"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center" id="">0</div>
+                    <div class="card-body">
+                        <div id="4_red" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-danger"></div>
+                        <div id="4_yellow" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-warning"></div>
+                        <div id="4_green" style="width: 100px;height: 100px; border-radius: 50%; margin: auto;" class="my-2 bg-success"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let i = 0
+        let light = 1
+        function run(){
+            if(i > 10){
+                i=0
+                if(light>3){
+                    light = 1
+                }
+                else{
+                    light += 1
+                }
+            }
+            else{
+                $(".card-header").html(i)
+                if(light == 1){
+                    $("#1_red").removeClass("bg-red")
+                    $("#1_red").addClass("bg-dark")
+                    $("#1_yellow").removeClass("bg-warning")
+                    $("#1_yellow").addClass("bg-dark")
+                    $("#1_green").addClass("bg-sucess")
+                    $("#1_green").removeClass("bg-dark")
+                    
+                    $("#2_red").removeClass("bg-dark")
+                    $("#2_red").addClass("bg-red")
+                    $("#2_yellow").removeClass("bg-warning")
+                    $("#2_yellow").addClass("bg-dark")
+                    $("#2_green").addClass("bg-dark")
+                    $("#2_green").removeClass("bg-sucess")
+                    
+                    $("#3_red").removeClass("bg-dark")
+                    $("#3_red").addClass("bg-red")
+                    $("#3_yellow").removeClass("bg-warning")
+                    $("#3_yellow").addClass("bg-dark")
+                    $("#3_green").addClass("bg-dark")
+                    $("#3_green").removeClass("bg-sucess")
+                    
+                    $("#4_red").removeClass("bg-dark")
+                    $("#4_red").addClass("bg-red")
+                    $("#4_yellow").removeClass("bg-warning")
+                    $("#4_yellow").addClass("bg-dark")
+                    $("#4_green").addClass("bg-dark")
+                    $("#4_green").removeClass("bg-sucess")
+                    
+                    if(i>7){
+                        $("#1_red").removeClass("bg-red")
+                        $("#1_red").addClass("bg-dark")
+                        $("#1_yellow").addClass("bg-warning")
+                        $("#1_yellow").removeClass("bg-dark")
+                        $("#1_green").removeClass("bg-sucess")
+                        $("#1_green").addClass("bg-dark")
+
+                        $("#2_red").addClass("bg-dark")
+                        $("#2_red").removeClass("bg-red")
+                        $("#2_yellow").addClass("bg-warning")
+                        $("#2_yellow").removeClass("bg-dark")
+                        $("#2_green").addClass("bg-dark")
+                        $("#2_green").removeClass("bg-sucess")
+                    }
+                    i++
+                }
+
+                else if(light == 2){
+                    $("#2_red").removeClass("bg-red")
+                    $("#2_red").addClass("bg-dark")
+                    $("#2_yellow").removeClass("bg-warning")
+                    $("#2_yellow").addClass("bg-dark")
+                    $("#2_green").addClass("bg-sucess")
+                    $("#2_green").removeClass("bg-dark")
+                    
+                    $("#3_red").removeClass("bg-dark")
+                    $("#3_red").addClass("bg-red")
+                    $("#3_yellow").removeClass("bg-warning")
+                    $("#3_yellow").addClass("bg-dark")
+                    $("#3_green").addClass("bg-dark")
+                    $("#3_green").removeClass("bg-sucess")
+                    
+                    $("#4_red").removeClass("bg-dark")
+                    $("#4_red").addClass("bg-red")
+                    $("#4_yellow").removeClass("bg-warning")
+                    $("#4_yellow").addClass("bg-dark")
+                    $("#4_green").addClass("bg-dark")
+                    $("#4_green").removeClass("bg-sucess")
+                    
+                    $("#1_red").removeClass("bg-dark")
+                    $("#1_red").addClass("bg-red")
+                    $("#1_yellow").removeClass("bg-warning")
+                    $("#1_yellow").addClass("bg-dark")
+                    $("#1_green").addClass("bg-dark")
+                    $("#1_green").removeClass("bg-sucess")
+                    
+                    if(i>7){
+                        $("#2_red").removeClass("bg-red")
+                        $("#2_red").addClass("bg-dark")
+                        $("#2_yellow").addClass("bg-warning")
+                        $("#2_yellow").removeClass("bg-dark")
+                        $("#2_green").removeClass("bg-sucess")
+                        $("#2_green").addClass("bg-dark")
+
+                        $("#3_red").addClass("bg-dark")
+                        $("#3_red").removeClass("bg-red")
+                        $("#3_yellow").addClass("bg-warning")
+                        $("#3_yellow").removeClass("bg-dark")
+                        $("#3_green").addClass("bg-dark")
+                        $("#3_green").removeClass("bg-sucess")
+                    }
+                    i++
+                }
+
+                else if(light == 3){
+                    $("#3_red").removeClass("bg-red")
+                    $("#3_red").addClass("bg-dark")
+                    $("#3_yellow").removeClass("bg-warning")
+                    $("#3_yellow").addClass("bg-dark")
+                    $("#3_green").addClass("bg-sucess")
+                    $("#3_green").removeClass("bg-dark")
+                    
+                    $("#4_red").removeClass("bg-dark")
+                    $("#4_red").addClass("bg-red")
+                    $("#4_yellow").removeClass("bg-warning")
+                    $("#4_yellow").addClass("bg-dark")
+                    $("#4_green").addClass("bg-dark")
+                    $("#4_green").removeClass("bg-sucess")
+                    
+                    $("#1_red").removeClass("bg-dark")
+                    $("#1_red").addClass("bg-red")
+                    $("#1_yellow").removeClass("bg-warning")
+                    $("#1_yellow").addClass("bg-dark")
+                    $("#1_green").addClass("bg-dark")
+                    $("#1_green").removeClass("bg-sucess")
+                    
+                    $("#2_red").removeClass("bg-dark")
+                    $("#2_red").addClass("bg-red")
+                    $("#2_yellow").removeClass("bg-warning")
+                    $("#2_yellow").addClass("bg-dark")
+                    $("#2_green").addClass("bg-dark")
+                    $("#2_green").removeClass("bg-sucess")
+                    
+                    if(i>7){
+                        $("#3_red").removeClass("bg-red")
+                        $("#3_red").addClass("bg-dark")
+                        $("#3_yellow").addClass("bg-warning")
+                        $("#3_yellow").removeClass("bg-dark")
+                        $("#3_green").removeClass("bg-sucess")
+                        $("#3_green").addClass("bg-dark")
+
+                        $("#4_red").addClass("bg-dark")
+                        $("#4_red").removeClass("bg-red")
+                        $("#4_yellow").addClass("bg-warning")
+                        $("#4_yellow").removeClass("bg-dark")
+                        $("#4_green").addClass("bg-dark")
+                        $("#4_green").removeClass("bg-sucess")
+                    }
+                    i++
+                }
+
+                else if(light == 4){
+                    $("#4_red").removeClass("bg-red")
+                    $("#4_red").addClass("bg-dark")
+                    $("#4_yellow").removeClass("bg-warning")
+                    $("#4_yellow").addClass("bg-dark")
+                    $("#4_green").addClass("bg-sucess")
+                    $("#4_green").removeClass("bg-dark")
+                    
+                    $("#1_red").removeClass("bg-dark")
+                    $("#1_red").addClass("bg-red")
+                    $("#1_yellow").removeClass("bg-warning")
+                    $("#1_yellow").addClass("bg-dark")
+                    $("#1_green").addClass("bg-dark")
+                    $("#1_green").removeClass("bg-sucess")
+                    
+                    $("#2_red").removeClass("bg-dark")
+                    $("#2_red").addClass("bg-red")
+                    $("#2_yellow").removeClass("bg-warning")
+                    $("#2_yellow").addClass("bg-dark")
+                    $("#2_green").addClass("bg-dark")
+                    $("#2_green").removeClass("bg-sucess")
+                    
+                    $("#3_red").removeClass("bg-dark")
+                    $("#3_red").addClass("bg-red")
+                    $("#3_yellow").removeClass("bg-warning")
+                    $("#3_yellow").addClass("bg-dark")
+                    $("#3_green").addClass("bg-dark")
+                    $("#3_green").removeClass("bg-sucess")
+                    
+                    if(i>7){
+                        $("#4_red").removeClass("bg-red")
+                        $("#4_red").addClass("bg-dark")
+                        $("#4_yellow").addClass("bg-warning")
+                        $("#4_yellow").removeClass("bg-dark")
+                        $("#4_green").removeClass("bg-sucess")
+                        $("#4_green").addClass("bg-dark")
+
+                        $("#1_red").addClass("bg-dark")
+                        $("#1_red").removeClass("bg-red")
+                        $("#1_yellow").addClass("bg-warning")
+                        $("#1_yellow").removeClass("bg-dark")
+                        $("#1_green").addClass("bg-dark")
+                        $("#1_green").removeClass("bg-sucess")
+                    }
+                    i++
+                }
+            }
+        }
+        $("#start").click(function(){
+            last = setInterval(run,300);
+        })
+        $("#stop").click(function(){
+            clearInterval(last);
+        })
+    </script>
+</body>
+</html>
