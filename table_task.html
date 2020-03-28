@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="WebDesign/static/jquery.js"></script>
+</head>
+<body>
+    <input type="text" placeholder="First Name" id="fname">
+    <input type="text" placeholder="Last Name" id="lname">
+    <input type="button" id="btn" value="Submit">
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+            <tr>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <script>
+        var data = [];
+        $("#btn").click(function(){
+
+        
+        $("#fname").val()    
+        $("#lname").val() 
+        data.push($("#fname").val())   
+        data.push($("#lname").val())
+        
+        perrow = 2
+        html = "<tr>";
+
+
+        for (var i=0; i<data.length; i++) {
+            html += "<td>" + data[i] + "</td>";
+  
+            var next = i+1;
+            if (next%perrow==0 && next!=data.length) {
+                html += "<td><button id='"+i+"'>Delete</button></td>";
+                html += "</tr><tr>";
+  }
+  
+}
+    html += "<td><button id="+data.length+"'>Delete</button></td>";
+    html += "</tr>";
+
+
+document.getElementById("body").innerHTML = html;
+
+
+})
+for (var i=0; i<data.length; i++){
+ $("#"+i+"").click(function(){
+    for( var j = 0; j < data.length; j++)
+    { if ( data[i] === data[j]) 
+    { array.splice(j, 1); }}
+ })   
+}
+    </script>
+
+</body>
+</html>

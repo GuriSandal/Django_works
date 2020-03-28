@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos repellendus voluptas unde labore amet architecto ipsam ratione. Impedit accusamus earum provident, molestias voluptates recusandae amet explicabo! Dignissimos, eaque rem.</h1>
+    <table border="1" align="center" style="text-align: center; width: 80%;" cellspacing="0">
+        <thead>
+            <tr>
+                <td>Color Name</td>
+                <td>Color</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in color %}
+            <tr>
+                <td>
+                    <h3>{{i}}</h3>
+                </td>
+                <td>
+                    <div style="height: 100px; width: 100%; background: {{i}};"></div>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>

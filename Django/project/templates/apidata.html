@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <table border="1" align="center" style="text-align: center; width: 90%;" cellspacing="0">
+        <thead>
+            <tr style="font-weight: bold;">
+                <td>Name</td>
+                <td>Capital</td>
+                <td>Borders</td>
+                <td>Flag</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in data %}
+            <tr>
+                <td>
+                    {{i.name}}
+                </td>
+                <td>
+                    {{i.capital}}
+                </td>
+                <td>
+                    {{i.borders}}
+                </td>
+                <td>
+                    <div><img src="{{i.flag}}" alt="" height="100" width="200"></div>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>
